@@ -1,13 +1,13 @@
-Demo Source Package
+Global World Origin Source Package
 
 Research and development, with the Magic Leap v0.24.1 SDK
 
 What you get:
 
-a) controller picker/manipulator
-b) a cube that you can pick by pointing at it and pulling the trigger down, move to clone it and release the trigger drop the cloned cube.
-c) a "trash can" cylinder where you can move and drop the cloned cubes onto, to "delete them".  
-d) 'World Mesh Builder', a room mapper that will place rotating cubes around the room. Touch those rotating cubes with the controller to make them disappear.
+a) A cube that is aware of Persisten Coordinate Frames (PFC). Move the cube with the controller and after restarting the App, the cube should be re-positioned automatically at the PCF-bound position.
+b) A controller picker/manipulator
+c) A world mesh (tap the bumper to show or hide the mesh)
+
 
 Required:
 
@@ -25,12 +25,12 @@ To use:
 6) Go to File -> Build Settings and choose Lumin as the Platform and click on the Switch Platform button
 7) It may take a few minutes for Unity3D to switch to the Lumin Platform
 8) Leave the Built Settings Window open
-9) In the Project Window, right click on Assets then -> Import Package, then click on Custom Package, then click opn Demo.unitypackage and click on the Open button
+9) In the Project Window, right click on Assets then -> Import Package, then click on Custom Package, then click opn GlobalWorldOrigin.unitypackage and click on the Open button
 10) When asked to choose what to import, click on the All button, then click on the Import button
 11) It may take a few minutes to import the Demo.unitypackage
-12) If you look at the Project Windows, and look at the Assets folder, you will see new folders "Demo-MLS" and "Resources"
-13) Click to open the Demo-MLS folder, then click to open the Scenes folder
-14) Double click on the "Game World Mesh Builder" scene, to load it
+12) If you look at the Project Windows, and look at the Assets folder, you will see new folders "GlobalOrigin-MLS" and TextMesh Pro 
+13) Click to open the GlobalOrigin-MLS folder, then click to open the Scenes folder
+14) Double click on the "Global Origin" scene, to load it
 15)  In the Build Settings Folder, click on the Player Settings button
 16)  In the Player, go to Publisher Settings and enter the path to your Magic Leap dev certificate, then close the Project Settings window
 17) In the Build Settings Folder, click the Build button to build the mpk file
@@ -39,6 +39,23 @@ Rodney Degracia
 rodney@magicallightandsound.com
 
 
+Note: 
+
+To test, you should do the following:
+
+Prequisites:
+- You have successfully built the App following the above 17 steps
+- You have enabled Shared World in your device settings
+
+1) Restart your ML device.
+2) When it asks you to scan your Home,  scan your Home so that it will create a localized map.
+3) After you're done scanning your home and ML says it recognizes your space, then launch the App.
+4) Move the cube to the center of the room.
+5) Hold down the home button to pause the App, to get back to the Main menu.
+6) When you are back at the Main menu, hold the home button again and you will see the task list.
+7) Terminate the App from the list of running/paused tasks.
+8) Then relaunch the App from the Main menu.
+9) The cube should reaapper in the center of the room.
 
 
 
